@@ -2,16 +2,10 @@ pipeline {
     agent any
 
     triggers {
-        cron('0 8 * * *')   // ⏰ daily 8 AM
+        cron('0 8 * * *')
     }
 
     stages {
-
-        stage('Clone') {
-            steps {
-                git 'https://github.com/Passionatecoder20230412/naukri-resume.git'
-            }
-        }
 
         stage('Setup') {
             steps {
